@@ -9,7 +9,7 @@ def wrtDB():
     name = input()
     print("Introduzca una edad:")
     age = input()
-    conn = psycopg2.connect(dbname="app1", user="postgres", password="Noviembre226", host="localhost", port="5432")
+    conn = psycopg2.connect(dbname="app1", user="postgres", password="#########", host="localhost", port="5432")
     cur = conn.cursor()
     query = '''INSERT INTO personas(nombre, edad) VALUES (%s, %s)'''
     cur.execute(query, (name, age))
@@ -22,7 +22,7 @@ def wrtDB():
         main()
 #Funcion para leer los datos de la db
 def rdDB():
-    conn = psycopg2.connect(dbname="app1", user="postgres", password="Noviembre226", host="localhost", port="5432")
+    conn = psycopg2.connect(dbname="app1", user="postgres", password="#########", host="localhost", port="5432")
     cur = conn.cursor()
     query = '''SELECT nombre, edad FROM personas'''
     cur.execute(query)
